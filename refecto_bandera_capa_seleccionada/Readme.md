@@ -1,46 +1,37 @@
 # Aplicar Efecto de Bandera Ondeante en After Effects
 
-Este script para Adobe After Effects aplica un efecto de bandera ondeante a la capa actualmente seleccionada en la composición activa. Utiliza el efecto "Wave Warp" para lograr el movimiento ondulante.
-
-## Instrucciones de Uso
-
-1. **Abrir After Effects**
-
-   Abre Adobe After Effects y carga el proyecto en el que deseas trabajar.
-
-2. **Seleccionar una Capa**
-
-   Asegúrate de que tienes una capa seleccionada en la composición activa. El script aplicará el efecto a la primera capa seleccionada.
-
-3. **Ejecutar el Script**
-
-   Ejecuta el script en After Effects. Puedes hacerlo copiando y pegando el código en el panel de script de After Effects y ejecutándolo.
+Este script para After Effects aplica el efecto "Wave Warp" a la primera capa seleccionada en la composición activa. Ideal para simular efectos de ondeo en capas, como banderas ondeantes.
 
 ## Funcionalidad
 
-1. **Obtener la Composición y Capa Seleccionada**
+- **Verificación de Composición**: Comprueba que hay una composición activa.
+- **Verificación de Capas**: Verifica que hay al menos una capa seleccionada en la composición activa.
+- **Aplicación de Efecto**: Añade el efecto "Wave Warp" a la primera capa seleccionada.
+- **Configuración de Efecto**: Ajusta las propiedades del efecto y aplica una expresión para modificar dinámicamente la altura de la onda.
+- **Deshacer**: Agrupa la operación en una sola acción deshacible.
 
-   El script obtiene la composición activa y la capa actualmente seleccionada. Si no hay una composición activa o ninguna capa seleccionada, muestra un mensaje de error.
+## Instrucciones de Uso
 
-2. **Aplicar el Efecto "Wave Warp"**
+1. Abre After Effects y carga tu proyecto.
+2. Asegúrate de tener una composición activa con al menos una capa seleccionada.
+3. Ejecuta el script.
+4. El efecto "Wave Warp" se aplicará a la primera capa seleccionada con una configuración predeterminada.
+5. Aparecerá un mensaje indicando el éxito o cualquier error en la operación.
 
-   Si hay una capa seleccionada, el script aplica el efecto "Wave Warp" a la capa y configura sus propiedades:
+## Requisitos
 
-   - Tipo de Onda: Senoidal
-   - Altura de la Onda: 15
-   - Ancho de la Onda: 100
-   - Dirección: 0
-   - Velocidad de la Onda: 1
+- Adobe After Effects
+- Una composición activa con al menos una capa seleccionada
 
-3. **Aplicar Expresión a la Altura de la Onda**
+## Notas
 
-   El script intenta aplicar una expresión a la propiedad de altura de la onda para crear un efecto de oscilación:
+- Asegúrate de que la capa seleccionada sea la correcta antes de ejecutar el script.
+- El script mostrará alertas para notificar el estado de la operación, incluidos posibles errores.
 
-   ```javascript
-   'freq = 2;  // Frecuencia de la onda\n' +
-   'amp = 20;  // Amplitud de la onda\n' +
-   'phase = time * freq * Math.PI * 2;\n' +
-   'amp * Math.sin(phase);';
-Advertencias
-Asegúrate de tener una capa seleccionada antes de ejecutar el script.
-El script creará un grupo de deshacer, permitiendo deshacer la operación como una sola acción.
+## Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, abre un issue o envía un pull request si tienes mejoras o correcciones.
+
+## Autor
+
+[Tu Nombre]
