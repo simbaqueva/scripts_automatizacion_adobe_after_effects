@@ -34,4 +34,4 @@ Las contribuciones son bienvenidas. Por favor, abre un issue o envía un pull re
 
 ## Autor
 
-[Tu Nombre]
+Alvaro Alexander Simbaqueva
